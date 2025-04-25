@@ -54,8 +54,8 @@ def run(**kwargs):
     retain_loader, forget_loader, val_loader,test_loader,_ = get_starter_dataset(batch_size=256,bs_f=args.bs,bs_r=256)
     n_class = 10
     net = resnet18(weights=None, num_classes=n_class)
-    weights_pretrained = torch.load('checkpoints/pre-train-model_epoch_40_lr_0.1_momentum_0.9_weightdecay_0.0005.pth', map_location=DEVICE)
-    # weights_pretrained = torch.load('weights_resnet18_cifar10.pth', map_location=DEVICE)
+    # weights_pretrained = torch.load('checkpoints/pre-train-model_epoch_40_lr_0.1_momentum_0.9_weightdecay_0.0005.pth', map_location=DEVICE)
+    weights_pretrained = torch.load('weights_resnet18_cifar10.pth', map_location=DEVICE)
 
     net.load_state_dict(weights_pretrained)
     net.to(DEVICE)
