@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ### Obtaining the Models
 To download and set up the pre-trained and re-trained SCRUB models in your local environment, run:
 ```python3
-python3 train_checkpoints.py
+python3 train_checkpoint.py
 ```
 ## Performing Unlearning
 After obtaining the pre-trained model, use the following commands to perform unlearning:
